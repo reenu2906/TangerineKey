@@ -10,7 +10,7 @@ import Foundation
 import CoreBluetooth
 import UIKit
 
-class BLECentralManager {
+public class BLECentralManager {
     
     /*Our key player in this app will be our CBCentralManager. CBCentralManager objects are used to manage discovered or connected remote peripheral devices (represented by CBPeripheral objects), including scanning for, discovering, and connecting to advertising peripherals.
      */
