@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F54C04A2152D6141950F9C9 /* Pods_TangerineKey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF0DE1FB014FD95B1ED502DF /* Pods_TangerineKey.framework */; };
 		8EFCFDE924113D3F005EE9F5 /* TangerineKey.h in Headers */ = {isa = PBXBuildFile; fileRef = 8EFCFDE724113D3F005EE9F5 /* TangerineKey.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8EFCFDFE24113DA0005EE9F5 /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFCFDF024113DA0005EE9F5 /* ResponseModel.swift */; };
 		8EFCFDFF24113DA0005EE9F5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFCFDF124113DA0005EE9F5 /* Constants.swift */; };
@@ -42,6 +43,9 @@
 		8EFCFDFB24113DA0005EE9F5 /* BLECentralManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLECentralManager.swift; sourceTree = "<group>"; };
 		8EFCFDFC24113DA0005EE9F5 /* CommonUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonUtils.swift; sourceTree = "<group>"; };
 		8EFCFDFD24113DA0005EE9F5 /* Double+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
+		94C435A83751718AA7DB4BDC /* Pods-TangerineKey.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TangerineKey.release.xcconfig"; path = "Target Support Files/Pods-TangerineKey/Pods-TangerineKey.release.xcconfig"; sourceTree = "<group>"; };
+		AA033646F3F66C403D758D57 /* Pods-TangerineKey.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TangerineKey.debug.xcconfig"; path = "Target Support Files/Pods-TangerineKey/Pods-TangerineKey.debug.xcconfig"; sourceTree = "<group>"; };
+		AF0DE1FB014FD95B1ED502DF /* Pods_TangerineKey.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TangerineKey.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,17 +53,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F54C04A2152D6141950F9C9 /* Pods_TangerineKey.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		248DA2FC8B45EDEDCECC388A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AF0DE1FB014FD95B1ED502DF /* Pods_TangerineKey.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		86C2E5F94F27E0280B9F1F57 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AA033646F3F66C403D758D57 /* Pods-TangerineKey.debug.xcconfig */,
+				94C435A83751718AA7DB4BDC /* Pods-TangerineKey.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		8EFCFDDA24113D3F005EE9F5 = {
 			isa = PBXGroup;
 			children = (
 				8EFCFDE624113D3F005EE9F5 /* TangerineKey */,
 				8EFCFDE524113D3F005EE9F5 /* Products */,
+				86C2E5F94F27E0280B9F1F57 /* Pods */,
+				248DA2FC8B45EDEDCECC388A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -120,6 +145,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8EFCFDEC24113D3F005EE9F5 /* Build configuration list for PBXNativeTarget "TangerineKey" */;
 			buildPhases = (
+				1454FEC8AB24ADF47A76C655 /* [CP] Check Pods Manifest.lock */,
 				8EFCFDDF24113D3F005EE9F5 /* Headers */,
 				8EFCFDE024113D3F005EE9F5 /* Sources */,
 				8EFCFDE124113D3F005EE9F5 /* Frameworks */,
@@ -174,6 +200,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1454FEC8AB24ADF47A76C655 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TangerineKey-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8EFCFDE024113D3F005EE9F5 /* Sources */ = {
@@ -324,6 +375,7 @@
 		};
 		8EFCFDED24113D3F005EE9F5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA033646F3F66C403D758D57 /* Pods-TangerineKey.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -348,6 +400,7 @@
 		};
 		8EFCFDEE24113D3F005EE9F5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 94C435A83751718AA7DB4BDC /* Pods-TangerineKey.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
