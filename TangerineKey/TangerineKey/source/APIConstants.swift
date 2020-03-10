@@ -1,17 +1,16 @@
 //
 //  APIConstants.swift
-//  TwistySystems
+//  TangerineKey
 //
-//  Created by Arshad on 24/10/18.
-//  Copyright © 2018 Arshad. All rights reserved.
+//  Created by Reenu Deswal on 06/03/20.
+//  Copyright © 2020 Reenu Deswal . All rights reserved.
 //
+
 
 import Foundation
 
-struct URLConstant {
-	//static let baseURL = "https://test-api1-jido.tangerine.ai/v1/"
+public struct URLConstant {
     static let baseURL = "https://api.tangerine.ai/v1/"
-   // static  let baseURL = "https://preprod-api1-jido.tangerine.ai/v1/"
 }
 
 struct APIMetaData {
@@ -31,7 +30,7 @@ struct APIErrorDescription {
   static let cancelled = "cancelled"
 }
 
-struct APIKeys {
+public struct APIKeys {
 	//Base keys
 
   static let code = "code"
@@ -39,8 +38,8 @@ struct APIKeys {
   static let data = "data"
 	
 	//Auth keys
-	static let bookingReference = "booking_reference"
-	static let phoneNumber = "phone_number"
+	public static let bookingReference = "booking_reference"
+	public static let phoneNumber = "phone_number"
 
 }
 

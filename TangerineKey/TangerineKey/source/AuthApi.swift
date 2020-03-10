@@ -1,19 +1,20 @@
 //
 //  AuthApi.swift
-//  TwistySystems
+//  TangerineKey
 //
-//  Created by Arshad on 06/03/19.
-//  Copyright © 2019 Twisty Systems. All rights reserved.
+//  Created by Reenu Deswal on 06/03/20.
+//  Copyright © 2020 Reenu Deswal . All rights reserved.
 //
+
 
 import Foundation
 import Alamofire
 
-enum AuthApiRequestType: RequestTypeProtocol {
+public enum AuthApiRequestType: RequestTypeProtocol {
 	
 	case validateOBD(param: [String:Any])
 
-	func getDataProvider() -> RequestDataProviderProtocol {
+    public func getDataProvider() -> RequestDataProviderProtocol {
 		return AuthApiDataProvider()
 	}
 }

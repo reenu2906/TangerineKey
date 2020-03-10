@@ -1,19 +1,15 @@
 //
 //  Constants.swift
-//  JIDO KEY
+//  TangerineKey
 //
-//  Created by Arshad on 28/03/19.
+//  Created by Reenu Deswal on 06/03/20.
+//  Copyright © 2020 Reenu Deswal . All rights reserved.
 //
 
 import Foundation
 
-struct SegueID {
-	static let showHomeSegue = "showHomeSegue"
-	static let getStartedSegue = "getStartedSegue"
-	static let showHomeFromSplashSegue = "showHomeFromSplashSegue"
-}
 
-struct BLEMessageContent {
+public struct BLEMessageContent {
 	static let payload 		= "JidoKey"
 	static let separator 	= ","
 	static let bookID			= "#bi"
@@ -21,7 +17,8 @@ struct BLEMessageContent {
 	static let eom				= "#e"
     static let obdID        = "#ob"
 }
-enum BLEResponse: String {
+
+public enum BLEResponse: String {
 	case success = "#y"
 	case failure = "#n"
 	case notConnected = "#nc"
@@ -30,8 +27,3 @@ enum BLEResponse: String {
     case senseInternetIssue = "#nn"
 }
 
-enum AppState {
-	case notInitialized
-	case initializing
-	case initialized
-}

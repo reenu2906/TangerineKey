@@ -1,15 +1,16 @@
 //
 //  RequestTypeProtocol.swift
-//  TwistySystems
+//  TangerineKey
 //
-//  Created by Arshad on 06/09/18.
-//  Copyright © 2018 Arshad. All rights reserved.
+//  Created by Reenu Deswal on 06/03/20.
+//  Copyright © 2020 Reenu Deswal . All rights reserved.
 //
+
 
 import Foundation
 import Alamofire
 
-protocol RequestDataProviderProtocol {
+public protocol RequestDataProviderProtocol {
 	func requestMethodForType(_ type: RequestTypeProtocol) -> HTTPMethod
   func requestHeaderForType(_ type: RequestTypeProtocol) -> HTTPHeaders?
   func requestEncodingForType(_ type: RequestTypeProtocol) -> ParameterEncoding
@@ -19,7 +20,7 @@ protocol RequestDataProviderProtocol {
 										 response: [String : Any]) -> (response:APIResponse?, error:Error?)?
 }
 
-extension RequestDataProviderProtocol {
+public extension RequestDataProviderProtocol {
 	
 	func requestHeaderForType(_ type: RequestTypeProtocol) -> HTTPHeaders? {
 		let signature = requestSignature
@@ -33,7 +34,7 @@ extension RequestDataProviderProtocol {
 }
 
 /// Request Type Protocol
-protocol RequestTypeProtocol  {
+public protocol RequestTypeProtocol  {
 	
 	/// Get the data provider for a request
 	///
@@ -75,28 +76,28 @@ protocol RequestTypeProtocol  {
 
 extension RequestTypeProtocol {
 	
-	func getHTTPMethod() -> HTTPMethod {
+    public func getHTTPMethod() -> HTTPMethod {
 		return getDataProvider().requestMethodForType(self)
 	}
 	
-  func header() -> HTTPHeaders? {
+    public func header() -> HTTPHeaders? {
     return getDataProvider().requestHeaderForType(self)
   }
   
-	func getRequestUrl() -> String {
+    public func getRequestUrl() -> String {
 		return getDataProvider().requestUrlForType(self)
 	}
 	
-	func params() -> [String: Any]? {
-		return getDataProvider().requestParamsForType(self)
+    public func params() -> [String: Any]? {
+        return getDataProvider().requestParamsForType(self)
 	}
 	
-	func responseModel(_ response: [String : Any]) -> (response:APIResponse?, error:Error?)? {
+    public func responseModel(_ response: [String : Any]) -> (response:APIResponse?, error:Error?)? {
 		return getDataProvider().responseModel(self,
 																					 response: response)
 	}
 	
-  func getEncoding() -> ParameterEncoding {
+    public func getEncoding() -> ParameterEncoding {
     return getDataProvider().requestEncodingForType(self)
   }
 }

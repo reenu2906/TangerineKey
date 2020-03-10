@@ -1,14 +1,16 @@
 //
-//  TwistySystemsAPIManager.swift
-//  TwistySystems
+//  APIManager.swift
+//  TangerineKey
 //
-//  Created by Arshad on 24/10/18.
-//  Copyright © 2018 Arshad. All rights reserved.
+//  Created by Reenu Deswal on 06/03/20.
+//  Copyright © 2020 Reenu Deswal . All rights reserved.
 //
+
+
 import Foundation
 import Alamofire
 
-class APIManager {
+public class APIManager {
 	
 	private static var alamofireManager = Alamofire.SessionManager.default
 	
@@ -17,7 +19,7 @@ class APIManager {
 	/// - Parameters:
 	///   - type: request type as RequestTypeProtocol
 	///   - completion: response as Response model
-	func request(type: RequestTypeProtocol,
+	public func request(type: RequestTypeProtocol,
 							 completion: @escaping (_ response:APIResponse?, _ error:Error?) -> Void ) {
 		if NetworkReachabilityManager()!.isReachable {
 			let method = type.getHTTPMethod()
@@ -76,6 +78,8 @@ class APIManager {
 			callback(nil, error)
 		}
 	}
+    
+    public init(){}
 	
 	/// Cancell all webservice requests
 	public class func cancelAllRequests() {

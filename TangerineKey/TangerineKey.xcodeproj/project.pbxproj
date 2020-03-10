@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1F54C04A2152D6141950F9C9 /* Pods_TangerineKey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF0DE1FB014FD95B1ED502DF /* Pods_TangerineKey.framework */; };
+		8E7164E52412364000AF2B10 /* APIManager+User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7164E42412364000AF2B10 /* APIManager+User.swift */; };
+		8E78D0B32412781B00B5BE58 /* TangerineKeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E78D0B22412781B00B5BE58 /* TangerineKeyManager.swift */; };
 		8EFCFDE924113D3F005EE9F5 /* TangerineKey.h in Headers */ = {isa = PBXBuildFile; fileRef = 8EFCFDE724113D3F005EE9F5 /* TangerineKey.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8EFCFDFE24113DA0005EE9F5 /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFCFDF024113DA0005EE9F5 /* ResponseModel.swift */; };
 		8EFCFDFF24113DA0005EE9F5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFCFDF124113DA0005EE9F5 /* Constants.swift */; };
@@ -26,6 +28,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8E7164E42412364000AF2B10 /* APIManager+User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIManager+User.swift"; sourceTree = "<group>"; };
+		8E78D0B22412781B00B5BE58 /* TangerineKeyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TangerineKeyManager.swift; sourceTree = "<group>"; };
 		8EFCFDE424113D3F005EE9F5 /* TangerineKey.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TangerineKey.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EFCFDE724113D3F005EE9F5 /* TangerineKey.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TangerineKey.h; sourceTree = "<group>"; };
 		8EFCFDE824113D3F005EE9F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -74,7 +78,6 @@
 				AA033646F3F66C403D758D57 /* Pods-TangerineKey.debug.xcconfig */,
 				94C435A83751718AA7DB4BDC /* Pods-TangerineKey.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -123,6 +126,8 @@
 				8EFCFDFB24113DA0005EE9F5 /* BLECentralManager.swift */,
 				8EFCFDFC24113DA0005EE9F5 /* CommonUtils.swift */,
 				8EFCFDFD24113DA0005EE9F5 /* Double+Extensions.swift */,
+				8E7164E42412364000AF2B10 /* APIManager+User.swift */,
+				8E78D0B22412781B00B5BE58 /* TangerineKeyManager.swift */,
 			);
 			path = source;
 			sourceTree = "<group>";
@@ -234,7 +239,9 @@
 				8EFCFE0A24113DA0005EE9F5 /* CommonUtils.swift in Sources */,
 				8EFCFE0624113DA0005EE9F5 /* UUIDKey.swift in Sources */,
 				8EFCFE0B24113DA0005EE9F5 /* Double+Extensions.swift in Sources */,
+				8E7164E52412364000AF2B10 /* APIManager+User.swift in Sources */,
 				8EFCFE0424113DA0005EE9F5 /* AuthApi.swift in Sources */,
+				8E78D0B32412781B00B5BE58 /* TangerineKeyManager.swift in Sources */,
 				8EFCFE0724113DA0005EE9F5 /* APIManager.swift in Sources */,
 				8EFCFE0824113DA0005EE9F5 /* DESEncryptor.swift in Sources */,
 				8EFCFE0224113DA0005EE9F5 /* Date+Extension.swift in Sources */,

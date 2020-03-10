@@ -1,8 +1,9 @@
 //
 //  CommonUtils.swift
-//  JIDO KEY
+//  TangerineKey
 //
-//  Created by Arshad on 03/04/19.
+//  Created by Reenu Deswal on 06/03/20.
+//  Copyright © 2020 Reenu Deswal . All rights reserved.
 //
 
 import UIKit
@@ -10,23 +11,6 @@ import CommonCrypto
 
 class CommonUtilities: NSObject {
 	
-	// ---------------
-	// MARK: - General
-	// ---------------
-	
-	/// Return the top view controller to the given view controller or to the root window if no view controller given.
-	///
-	/// - Returns: Top most UIViewController object in the view presenting stack.
-	class func getTopViewController(of viewController: UIViewController? = nil) -> UIViewController? {
-		if var topController = viewController ?? UIApplication.shared.keyWindow?.rootViewController {
-			while let presentedViewController = topController.presentedViewController {
-				topController = presentedViewController
-			}
-			// TopController should now be your topmost view controller
-			return topController
-		}
-		return nil
-	}
 	
 	/// Prepares the MD5 for the given input string.
 	///

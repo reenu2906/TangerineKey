@@ -1,18 +1,20 @@
 //
 //  AuthModel.swift
-//  JIDO KEY
+//  TangerineKey
 //
-//  Created by Arshad on 08/04/19.
+//  Created by Reenu Deswal on 06/03/20.
+//  Copyright © 2020 Reenu Deswal . All rights reserved.
 //
+
 
 import Foundation
 
-struct AuthModel: Codable {
+public struct AuthModel: Codable {
 	
-	var endTimeString: String
-	var startTimeString: String
-	var veicleNumber: String
-    var obdId : String
+	public var endTimeString: String
+	public var startTimeString: String
+	public var veicleNumber: String
+    public var obdId : String
 	
 	enum CodingKeys: String,CodingKey
 	{
@@ -21,7 +23,7 @@ struct AuthModel: Codable {
 		case veicleNumber = "vehicle_number"
 		case obdId        = "obdId"
 	}
-	var isSessionExpired: Bool {
+	public var isSessionExpired: Bool {
 		let startDate = Date.date(from: startTimeString, with: "yyyy-MM-dd HH:mm:ss")
 		let endDate 	= Date.date(from: endTimeString, with: "yyyy-MM-dd HH:mm:ss")
 		if let startTimeStamp = startDate?.timeIntervalSince1970, let endTimeStamp = endDate?.timeIntervalSince1970 {
@@ -33,15 +35,13 @@ struct AuthModel: Codable {
 		return true
 	}
 	
-	var hasValidData: Bool {
+	public var hasValidData: Bool {
 		return !endTimeString.isEmpty && !startTimeString.isEmpty && !veicleNumber.isEmpty && endTimeString.count > 0 && startTimeString.count > 0 && veicleNumber.count > 0
 	}
 }
 
 extension AuthModel: APIResponse {
-	static func parse(JSON: [String: Any]) -> (response:APIResponse?, error:Error?) {
-		debugPrint("response = \(JSON)")
-		
+    public static func parse(JSON: [String: Any]) -> (response:APIResponse?, error:Error?) {
 		do {
 			guard let data = JSON[APIKeys.data] as? [String: Any] else {
 				return (nil, APIError.noData(message: "No data found"))

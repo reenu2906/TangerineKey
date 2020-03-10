@@ -1,14 +1,15 @@
 //
 //  DESEncryptor.swift
-//  JIDO KEY
+//  TangerineKey
 //
-//  Created by Arshad on 30/04/19.
+//  Created by Reenu Deswal on 06/03/20.
+//  Copyright © 2020 Reenu Deswal . All rights reserved.
 //
 
 import Foundation
 import CommonCrypto
 
-struct DESEncryptor {
+public struct DESEncryptor {
 	
 	private static let key:NSString = "sup3rS3xy"
 	

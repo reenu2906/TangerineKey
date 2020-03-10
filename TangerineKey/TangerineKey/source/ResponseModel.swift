@@ -1,16 +1,17 @@
 //
 //  ResponseModel.swift
-//  TwistySystems
+//  TangerineKey
 //
-//  Created by Arshad on 06/09/18.
-//  Copyright © 2018 Arshad. All rights reserved.
+//  Created by Reenu Deswal on 06/03/20.
+//  Copyright © 2020 Reenu Deswal . All rights reserved.
 //
 
-enum APIError:Error  {
+public enum APIError:Error  {
 	case noNetworkConnection(message: String)
 	case dataFormatError(message: String)
 	case noData(message: String)
 	case serverError(message: String)
+    case slotExpired(message : String)
 
 	init?(serverResponse response: Dictionary<String,Any>) {
 		
@@ -34,13 +35,13 @@ enum APIError:Error  {
 }
 
 
-protocol  APIResponse {
+public protocol  APIResponse {
 	
 	static func parse(JSON: [String: Any]) -> (response:APIResponse?, error:Error?)
 }
 
 extension APIResponse {
-	static func parse(JSON: [String: Any]) -> (response:APIResponse?, error:Error?) {
+    public static func parse(JSON: [String: Any]) -> (response:APIResponse?, error:Error?) {
 		return (JSON,nil)
 	}
 }

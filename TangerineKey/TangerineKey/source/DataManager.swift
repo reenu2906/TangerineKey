@@ -1,17 +1,19 @@
 //
 //  DataManager.swift
-//  JIDO KEY
+//  TangerineKey
 //
-//  Created by Arshad on 05/04/19.
+//  Created by Reenu Deswal on 06/03/20.
+//  Copyright © 2020 Reenu Deswal . All rights reserved.
 //
+
 
 import Foundation
 
-class DataManager {
+public class DataManager {
 	
-	static let shared = DataManager()
+	public static let shared = DataManager()
 	
-	var bookingReferenceID: String? {
+	public var bookingReferenceID: String? {
 		get {
 			return UserDefaults.standard.value(forKey: "bookingReferenceID") as? String
 		}
@@ -20,7 +22,7 @@ class DataManager {
 		}
 	}
 	
-	var phoneNumber: String? {
+	public var phoneNumber: String? {
 		get {
 			return UserDefaults.standard.value(forKey: "phoneNumber") as? String
 		}
@@ -29,7 +31,7 @@ class DataManager {
 		}
 	}
 	
-	var authData: AuthModel? {
+	public var authData: AuthModel? {
 		get {
 			if let data = UserDefaults.standard.value(forKey:"authData") as? Data {
 				return try? PropertyListDecoder().decode(AuthModel.self, from: data)
@@ -41,7 +43,7 @@ class DataManager {
 
 		}
 	}
-	var peripheralID: String? {
+	public var peripheralID: String? {
 		get {
 			return UserDefaults.standard.value(forKey: "peripheralID") as? String
 		}
@@ -50,7 +52,7 @@ class DataManager {
 		}
 	}
     
-    var peripheralName : String? {
+    public var peripheralName : String? {
         get {
             return UserDefaults.standard.value(forKey: "peripheralName") as? String
         }
@@ -60,7 +62,7 @@ class DataManager {
         
     }
     
-    var obdID : String? {
+    public var obdID : String? {
         get {
             return UserDefaults.standard.value(forKey: "obdID") as? String
         }
@@ -69,7 +71,7 @@ class DataManager {
         }
     }
     
-    var bookingEndtime : Double? {
+    public var bookingEndtime : Double? {
         get {
             return UserDefaults.standard.value(forKey: "bookingEndtime") as? Double
         }
@@ -78,14 +80,14 @@ class DataManager {
         }
     }
 	
-	var isDeviceConfigured: Bool {
+	public var isDeviceConfigured: Bool {
 		return peripheralID != nil && peripheralID != ""
 	}
 	private init(){
 
 	}
 	
-	func clearAllData()  {
+	public func clearAllData()  {
 		peripheralID = nil
 		authData = nil
 		phoneNumber = nil

@@ -1,12 +1,14 @@
 //
 //  Date+Extension.swift
-//  JIDO KEY
+//  TangerineKey
 //
-//  Created by Arshad on 17/05/19.
+//  Created by Reenu Deswal on 06/03/20.
+//  Copyright © 2020 Reenu Deswal . All rights reserved.
 //
 
+
 import Foundation
-extension Date {
+public extension Date {
 	
 	static func date(from dateString: String, with format: String) -> Date? {
 		let dateFormatter        = DateFormatter()
@@ -14,7 +16,6 @@ extension Date {
 		dateFormatter.locale     = Locale(identifier: "en_US")
 		dateFormatter.timeZone   = TimeZone(abbreviation: "GMT+0:00") // Current time zone
 		let date                 = dateFormatter.date(from: dateString) // According to date format your date string
-		
 		return date
 	}
 }
