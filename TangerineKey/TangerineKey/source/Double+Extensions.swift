@@ -10,7 +10,7 @@ import Foundation
 public extension Double {
 	
 	/// Method conver Double to String with no decimal digits
-	public var cleanStringValue: String {
+	 var cleanStringValue: String {
 		return String(format: "%.0f", self)
 	}
 }
