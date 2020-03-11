@@ -123,7 +123,7 @@ public class BLECentralManager : NSObject {
             if error != nil {
                 self?.state = .validationFailed
             }
-            else if  let loginResponse = response as? AuthModel {
+            else if  let loginResponse = response {
                 DataManager.shared.authData = loginResponse
                 DataManager.shared.obdID = loginResponse.obdId
                 DataManager.shared.bookingReferenceID = refNumber
